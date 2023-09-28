@@ -21,10 +21,24 @@ public class Author {
     public String toString(){
         return this.surname + " " + this.name;
     }
-    public boolean equals(Object o){
-        return this.getClass() == o.getClass();
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(this.name);
     }
+    /*
     public int hashCode() {
         return java.util.Objects.hash(this.getClass());
+    }*/
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Author c2 = (Author) other;
+        return this.name.equals(c2.name) && this.surname.equals(c2.surname);
     }
+    /* реализация метода аналогичная стандартному методу в Java
+    public boolean equals(Object o){
+        return this.getClass() == o.getClass();
+    }*/
 }
