@@ -4,7 +4,7 @@ public class Main {
         Author author1 = new Author("Петя","Иванов");
         Book book1 = new Book("Война и Мир",author,1111);
         Book book2 = new Book("Война и Мир",author1,1111);
-        book1.setBookName("Война и Мир");
+        book1.setBookYear(222);
         System.out.println(book1);
         System.out.println(book2);
         // Сравнение по имени и по фамилии автора
